@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Rituals</title> <!-- Title på sidan-->
+    <link rel="stylesheet" href="style.css"> <!-- länk till css filen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="sub-header"> <!-- första sektionen av sidan som är sub-header -->
+        <nav>
+            <!-- Rubriksektionen med navigering -->
+			<a href="index.html"><h2 class="logo">Green Rituals</h2> </a><!-- hemsidans logga -->
+                <div class="menu" id="Menu"><!-- meny klassen -->
+                    <i class="fa fa-times" onclick="hideMenu()"></i> <!-- x ikon som stänger menyn på en mobil enhet -->
+                    <ul> <!-- navigations meny -->
+                        <li><a href="index.html">Home</a></li> <!-- home meny som är länkat till home sida-->
+                        <li><a href="treatments.html">Treatments</a></li> <!-- behandling meny som är länkat till behandlingssida -->
+                        <li><a href="booking.html">Booking</a></li> <!-- Boka tid meny som är länkat till bokningssida -->
+                        <li><a href="about-us.html">About Us</a></li> <!-- om oss meny som är länkat till om oss sida -->
+                    </ul>
+                </div>
+                <i class="fa fa-bars mobile-menu-icon" onclick="showMenu()"></i> <!-- meny ikonen som synas på en mobil enhet -->
+            </nav>
+        <div class="title">
+        <h1>Here you can book your treatment</h1>  <!--rubriken på sidan-->
+        </div>
+    </section> <!-- Slut på första sektionen av sidan som är sub-header -->
+
+
+<!--boka tid form-->
+<!--Ett <form>-element som samlar in ett bokningsformulär-->
+<form action="confirmed.html" method="post"> <!--länken som går till bekräftelse sidan efter att man har bokat tid-->
+
+<div class="form-text">
+    <h2>Booking form</h2>  <!--rubriken på formuläret-->
+        
+        <div class="form">
+            <label for="namn">Name: </label> <br> <!-- Namn som definera etikett för formuläret-->
+            <input type="text" name="namn" id="namn" required> <!--input fält där användaren kan skriva i sitt namn-->
+        </div>
+
+        <div class="form">
+            <label for="telefon">Phone number: </label> <br> <!--Telefon som definera etikett för formuläret-->
+            <input type="tel" name="telefon" id="telefon" required> <!--input fält där användaren kan skriva i sitt nummer-->
+        </div>
+
+        <div class="form">
+            <label for="email">E-post: </label> <br> <!--E-post som definera etikett för formuläret-->
+            <input type="email" name="email" id="email" required> <!--input fält där användaren kan skriva i sitt mail-->
+        </div>
+
+        <div class="form">
+            <label for="date">Date: </label> <br> <!--Datum som definera etikett för formuläret-->
+            <input type="date" name="date" id="date" required> <!--input fält där användaren kan välja i datum de önskar boka-->
+        </div>
+
+        <div class="form">
+            <br><label>Choose treatments:</label> <br> <!--val av behandling som definera etikett för formuläret-->
+            <input type="checkbox" id="spacheckbox"> <!--checkbox knappen låter användaren välja ett eller fler val-->
+            <label for="spacheckbox">Spa treatment</label> <br> <!--Första valet-->
+
+            <input type="checkbox" id="massagecheckbox"> <!--checkbox knappen låter användaren välja ett eller fler val-->
+            <label for="massagecheckbox">Massage treatment</label> <br> <!--Andra valet-->
+
+            <input type="checkbox" id="Ansiktebehandlingcheckbox"> <!--checkbox knappen låter användaren välja ett eller fler val -->
+            <label for="Ansiktebehandlingcheckbox">Facial treatment</label> <br> <!--Tredje valet-->
+        </div>
+
+        <div class="form">
+            <br><label>Do you want to become a member? </label> <br> <!--Medlem val som definera etikett för formuläret-->
+            <input type="radio" id="yes" name="member" value="yes"> <!--radio knappen låter användaren välja ett val-->
+            <label for="yes">Yes</label> <br> <!--Första valet-->
+            <input type="radio" id="no" name="member" value="no"> <!--radio knappen låter användaren välja ett val-->
+            <label for="no">No</label> <!--Andra valet-->
+            </div>
+
+        <div class="form">
+            <br><label for="message">Message</label> <br> <!--Beskrivning som definera etikett för formuläret-->
+            <textarea id="message" rows="8" cols="25" name="message"></textarea> <!--en större box där användaren kan skriva sitt meddelande i-->
+        </div>
+
+         
+        <button type="submit" class="button">Book now</button> <!--Boka nu knappen -->
+</div>
+
+</form>
+
+<!--javascript for toggle menu-->
+<script>
+    var Menu= document.getElementById("Menu");
+    function showMenu(){
+        Menu.style.right="0";
+    }
+    function hideMenu(){
+        Menu.style.right="-200px";
+    }
+</script>
+
+</body>
+</html>

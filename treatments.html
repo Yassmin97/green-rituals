@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Rituals</title> <!-- Title på sidan-->
+    <link rel="stylesheet" href="style.css"> <!-- länk till css filen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="header"> <!-- första sektionen av sidan som är header -->
+        <nav>
+        <!-- Rubriksektionen med navigering -->
+        <a href="index.html"><h2 class="logo">Green Rituals</h2> </a><!-- hemsidans logga -->
+        <div class="menu" id="Menu"> <!-- meny klassen -->
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!-- x ikon som stänger menyn på en mobil enhet -->
+                <ul> <!-- navigations meny -->
+                    <li><a href="index.html">Home</a></li> <!-- home meny som är länkat till home sida-->
+                    <li><a href="treatments.html">Treatments</a></li> <!-- behandling meny som är länkat till behandlingssida -->
+                    <li><a href="booking.html">Booking</a></li> <!-- Boka tid meny som är länkat till bokningssida -->
+                    <li><a href="about-us.html">About Us</a></li> <!-- om oss meny som är länkat till om oss sida -->
+                </ul>
+            </div>
+            <i class="fa fa-bars mobile-menu-icon" onclick="showMenu()"></i> <!-- meny ikonen som synas på en mobil enhet -->
+        </nav>
+    <div class="text-box"> <!-- Textruta med rubrik av sidan, använder en class för att kunna styla det i css enklare -->
+        <h1>Here you will find our wonderful treatments</h1> <!-- text i heading 1 -->
+    </div>
+    </section> <!-- Slut på första sektionen av sidan som är header -->
+
+<!--Behandlingar delen-->
+
+<section class="treatments"> <!-- andra sektionen av sidan som är spa -->
+    <h1>Our Treatments</h1> <!-- sektionens heading-->
+    <h3>Spa treatments</h3> <!-- Rubrik på spa-->
+    <div class="row"><!-- class row så alla delar är på samma rad-->
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+                <img src="images/bali-spa.jpg" alt="spa"> <!-- Bild på spa -->
+                <h2>Indonesian Spa</h2>  <br> <!-- Rubrik på spa behandling-->
+                <p>Our Indonesian Spa is inspired by traditional Indonesian healing rituals,
+                    encompasses a variety of spa treatments originating from Indonesia's diverse
+                    cultural practices. These treatments often incorporate natural elements, age-old techniques, 
+                    and locally sourced ingredients to promote relaxation, rejuvenation, and overall wellness.</p>
+                <h4>Price from: 599kr</h4>    
+        </div>
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+                <img src="images/Spa-bath.jpg" alt="spa"> <!-- Bild på spa -->
+                <h2>Fiji Spa</h2>  <br> <!-- Rubrik på spa behandling-->
+                <p>Fiji Spa experiences are a harmonious blend of traditional healing practices
+                    and the serene beauty of the Fijian islands. These spa treatments often draw 
+                    inspiration from the rich cultural heritage of Fiji, incorporating indigenous ingredients
+                    and ancient rituals to create a rejuvenating and holistic wellness experience.</p>
+                    <h4>Price from: 599kr</h4>  
+            
+                </div>    
+                  
+            <div class="treatments-col"> <!-- behandlingskolonner -->
+                <img src="images/Jungel-spa.jpg" alt="spa"> <!-- Bild på spa -->
+                <h2>Luxury Jungel Spa</h2>  <br> <!-- Rubrik på spa behandling-->
+                <p>The Luxury Jungle Spa experience is a lavish and immersive wellness retreat
+                    set amidst lush, tropical landscapes. This type of spa embraces the natural 
+                    surroundings, offering a serene and revitalizing escape from the bustle of everyday life.</p> 
+                    <h4>Price from: 599kr</h4>  
+            </div>  
+        </div>
+         <div class="button-box">
+                    <a class="bt" href="booking.html">Book now</a> <!-- En knappen för att boka tid som är länkat till bokningssida -->
+                </div>           
+</section>
+
+<section class="treatments"> <!-- tredje sektionen av sidan som är massage -->
+    <h3>Massage treatments</h3> <!-- Rubrik på massage-->
+    <div class="row"> <!-- class row så alla delar är på samma rad-->
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+            <img src="images/thai-massage.jpg" alt="massage"> <!-- Bild på massage -->
+                <h2>Thai Massage</h2>  <br> <!-- Rubrik på massage -->
+                <p>Thai Massage is a therapeutic practice that combines acupressure and assisted yoga postures.
+                    Thai Massage is not just a physical therapy but also an art form that seeks to harmonize
+                    the body, mind, and spirit.</p> 
+                    <h4>Price from: 399kr</h4>  
+            </div> 
+
+            <div class="treatments-col"> <!-- behandlingskolonner -->
+                <img src="images/massage-view.jpg" alt="massage"> <!-- Bild på massage -->
+                    <h2>Relaxing Massage</h2>  <br> <!-- Rubrik på massage -->
+                    <p>A Relaxing Massage, also commonly referred to as a Swedish Massage or a
+                        Relaxation Massage, is a therapeutic technique focused on inducing deep
+                        relaxation and reducing muscle tension.</p> 
+                        <h4>Price from: 399kr</h4>  
+                
+                    </div>
+            
+            <div class="treatments-col"> <!-- behandlingskolonner -->
+                <img src="images/Hot-stones.jpg" alt="massage"> <!-- Bild på massage -->
+                    <h2>Hot Stone Massage</h2>  <br> <!-- Rubrik på massage -->
+                    <p>Our Hot Stone Massage is a therapeutic treatment that involves the use of heated
+                        stones, usually smooth, basalt stones, placed at specific points on the body to
+                        help relax and ease tense muscles.</p> 
+                        <h4>Price from: 399kr</h4>  
+            </div>
+</div>
+            <div class="button-box">
+                    <a class="bt" href="booking.html">Book now</a> <!-- En knappen för att boka tid som är länkat till bokningssida -->
+                </div>
+</section>
+ 
+
+<section class="treatments"> <!-- fjärde sektionen av sidan som är ansiktsbehandling -->
+    <h3>Facial treatments</h3> <!-- Rubrik på ansiktsbehandling-->
+    <div class="row"><!-- class row så alla delar är på samma rad-->
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+                <img src="images/Face-mask.jpg" alt="Ansiktsbehandling"> <!-- Bild på ansiktsbehandling -->
+                <h2>Relaxing Facial</h2>  <br> <!-- Rubrik på massage -->
+                <p>A Relaxing Facial is a spa treatment aimed at rejuvenating and soothing the skin while
+                    providing a calming and stress-relieving experience. It includes cleansing and preparation, steam and extraction
+                    massage, mask application and moisturization and protection.</p>
+                    <h4>Price from: 250kr</h4>   
+                </div>
+
+                <div class="treatments-col"> <!-- behandlingskolonner -->
+                    <img src="images/spa-facial.jpg" alt="Ansiktsbehandling"> <!-- Bild på ansiktsbehandling -->
+                    <h2>Spa Facial</h2>  <br> <!-- Rubrik på massage -->
+                    <p>A Spa Facial is a comprehensive skincare treatment performed by a professional esthetician
+                        in a spa setting. We start with skin analysis, cleansing and exfoliation, steam and extraction
+                        facial massage, mask application and Serums and moisturizers.</p> 
+                        <h4>Price from: 350kr</h4>  
+
+                      
+                </div>    
+                <div class="treatments-col"> <!-- behandlingskolonner -->
+                    <img src="images/Facial-massage.jpg" alt="Ansiktsbehandling"> <!-- Bild på ansiktsbehandling -->
+                    <h2>Facial massage</h2>  <br> <!-- Rubrik på massage -->
+                    <p>Facial massage is a rejuvenating technique that involves manipulating the facial muscles,
+                        skin, and connective tissues through gentle, targeted movements. Facial massages offer 
+                        immediate relaxation by relieving tension in the facial muscles, promoting a sense of 
+                        calm and reducing stress. </p> 
+                        <h4>Price from: 200kr</h4>  
+                    </div>
+                </div>
+                <div class="button-box">
+                    <a class="bt" href="booking.html">Book now</a> <!-- En knappen för att boka tid som är länkat till bokningssida -->
+                </div> <br> 
+</section> 
+
+<!--javascript for toggle menu-->
+<script>
+    var Menu= document.getElementById("Menu");
+    function showMenu(){
+        Menu.style.right="0";
+    }
+    function hideMenu(){
+        Menu.style.right="-200px";
+    }
+</script>
+
+</body>
+</html>

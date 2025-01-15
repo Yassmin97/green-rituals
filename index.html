@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Rituals</title> <!-- Title på sidan-->
+    <link rel="stylesheet" href="style.css"> <!-- länk till css filen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="header"> <!-- första sektionen av sidan som är header -->
+        <nav>
+        <!-- Rubriksektionen med navigering -->
+			<a href="index.html"><h2 class="logo">Green Rituals</h2> </a><!-- hemsidans logga -->
+            <div class="menu" id="Menu"><!-- meny klassen -->
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!-- x ikon som stänger menyn på en mobil enhet -->
+                <ul> <!-- navigations meny -->
+                    <li><a href="index.html">Home</a></li> <!-- home meny som är länkat till home sida-->
+                    <li><a href="treatments.html">Treatments</a></li> <!-- behandling meny som är länkat till behandlingssida -->
+                    <li><a href="booking.html">Booking</a></li> <!-- Boka tid meny som är länkat till bokningssida -->
+                    <li><a href="about-us.html">About Us</a></li> <!-- om oss meny som är länkat till om oss sida -->
+                </ul>
+            </div>
+            <i class="fa fa-bars mobile-menu-icon" onclick="showMenu()"></i> <!-- meny ikonen som synas på en mobil enhet -->
+        </nav>
+    <div class="text-box"> <!-- Textruta som innehåller välkomstmeddelandet och bokningsknappen, använder en class för att kunna styla det i css enklare -->
+        <h1>Welcome to our Green Rituals Spa</h1> <!-- välkommens text i heading 1 -->
+			<h3>We offer Spa, Massage & Facial treatments</h3> <br> <!-- text i heading 3 -->
+
+            <a class="bt" href="booking.html" >Book here</a> <!-- boka tid knappen som är länkat till bokningssida -->
+    </div>
+    </section> <!-- Slut på första sektionen av sidan som är header -->
+
+<!--Behandlingar delen-->
+
+<section class="treatments"> <!-- andra sektionen av sidan som är behandlingar -->
+    <h1>Our treatments</h1> <!-- sektionens heading-->
+
+    <div class="row">
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+        <a href="treatments.html"> <!-- Bilder och text är länkat till behandlingssida -->
+            <img src="images/Spa-bath.jpg" alt="spa"> <!-- Bild på spa -->
+            <h3>Spa Treatments</h3></a> <!-- Rubrik på spa behandling-->
+        </div>
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+           <a href="treatments.html"> <!-- Bilder och text är länkat till behandlingssida -->
+            <img src="images/relaxing-massage.jpg" alt="Massage"> <!-- Bild på massage -->
+            <h3>Massage Treatments</h3></a> <!-- Rubrik på massage -->
+        </div>
+        <div class="treatments-col"> <!-- behandlingskolonner -->
+            <a href="treatments.html"> <!-- Bilder och text är länkat till behandlingssida -->
+            <img src="images/Face-mask.jpg" alt="Ansiktsbehandling"> <!-- Bild på Ansiktesbehandling -->
+            <h3>Facial Treatments</h3></a> <!-- Rubrik på ansiktsbehandling-->
+        </div>
+    </div>
+</section> <!-- Slut på andra sektionen av sidan som är behandlingar -->
+
+<!--Om oss delen-->
+
+<section class="about-us"> <!-- tredje sektionen av sidan som är om oss -->
+    <h4>About us</h4> <!-- sektionens heading-->
+    <!-- span nedan används för att kunna ha texten bold och annat färg i css filen-->
+    <p> Welcome to <span>Green Rituals</span> where we focus on creating a relaxing and peaceful
+        environment for our customers. We specialize in professional spa treatments, 
+        including relaxing massages and facials. With us you get a tailor-made 
+        and personal experience, where each treatment is designed to promote both  
+        physical and mental well-being. Explore our world of relaxation and  
+        beauty and let us take care of you in the best possible way.</p> <!-- Text på sektionens innehåll-->
+
+</section> <!-- Slut på tredje sektionen av sidan som är om oss -->
+
+<!--javascript for toggle menu-->
+<script>
+    var Menu = document.getElementById("Menu");
+    function showMenu() {
+        Menu.style.right = "0";
+    }
+    function hideMenu() {
+        Menu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>

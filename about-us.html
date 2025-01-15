@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Rituals</title> <!-- Title på sidan-->
+    <link rel="stylesheet" href="style.css"> <!-- länk till css filen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="sub-header"> <!-- första sektionen av sidan som är sub-header -->
+        <nav>
+            <!-- Rubriksektionen med navigering -->
+			<a href="index.html"><h2 class="logo">Green Rituals</h2> </a><!-- hemsidans logga -->
+                <div class="menu" id="Menu"><!-- meny klassen -->
+                   <i class="fa fa-times" onclick="hideMenu()"></i> <!-- x ikon som stänger menyn på en mobil enhet -->
+                    <ul> <!-- navigations meny -->
+                        <li><a href="index.html">Home</a></li> <!-- home meny som är länkat till home sida-->
+                        <li><a href="behandlingar.html">Treatments</a></li> <!-- behandling meny som är länkat till behandlingssida -->
+                        <li><a href="boka-tid.html">Booking</a></li> <!-- Boka tid meny som är länkat till bokningssida -->
+                        <li><a href="om-oss.html">About Us</a></li> <!-- om oss meny som är länkat till om oss sida -->
+                    </ul>
+                </div>
+                <i class="fa fa-bars mobile-menu-icon" onclick="showMenu()"></i> <!-- meny ikonen som synas på en mobil enhet -->
+            </nav>
+            <h1>About Us</h1> <br> <!-- heading -->
+            <p> Welcome to <span>Green Rituals</span> where we focus on creating a relaxing and peaceful 
+                environment for our customers. We specialize in professional spa treatments, 
+                including relaxing massages and facials. With us you get a tailor-made 
+                and personal experience, where each treatment is designed to promote both  
+                physical and mental well-being. Explore our world of relaxation and  
+                beauty and let us take care of you in the best possible way.</p> <!-- Text på sektionens innehåll-->
+        
+    </section> <!-- Slut på första sektionen av sidan som är sub-header -->
+
+
+<!--personal på spa-->
+<section class="workers"> <!-- andra sektionen av sidan som är spa -->
+    <h1>Our Therapists</h1> <!-- sektionens heading-->
+    <div class="row"><!-- class row så alla delar är på samma rad-->
+        <div class="workers-col"> <!-- behandlingskolonner -->
+                <img src="Bilder/Rima.jpg" alt="Rima"> <!-- Bild på spa -->
+                <h2>Rima - Massage Therapist </h2>  <br> <!-- Rubrik på spa behandling-->
+                <p>Rima is an experienced massage therapist known for her intuitive touch and personalized
+                    approach. Her main focus lies in various massage modalities, including Swedish, deep
+                    tissue, and aromatherapy massages. With a keen understanding of anatomy and a calming
+                    demeanor, Rima customizes each session to address clients' specific needs, providing
+                    relaxation and relief from muscular tension.</p>
+        </div>
+
+        <div class="workers-col"> <!-- behandlingskolonner -->
+                <img src="Bilder/Sophie.jpg" alt="Sophie"> <!-- Bild på spa -->
+                <h2>Sophie - Esthetician</h2>  <br> <!-- Rubrik på spa behandling-->
+                <p>Sophie is a skilled esthetician specializing in facial treatments at the spa.
+                    With a passion for skincare, she offers a range of facial therapies, from rejuvenating
+                    facials to deep-cleansing treatments. Sophie's expertise lies in analyzing skin conditions
+                    and recommending tailored skincare regimens. Her meticulous care and attention leave 
+                    clients with radiant, glowing skin after every session.</p>
+                </div>    
+                  
+            <div class="workers-col"> <!-- behandlingskolonner -->
+                <img src="Bilder/Jaz.jpg" alt="spa"> <!-- Bild på spa -->
+                <h2>Jaz - Spa Specialist</h2>  <br> <!-- Rubrik på spa behandling-->
+                <p>Jaz is the spa's specialist offering a diverse array of spa treatments.
+                    Her expertise spans various holistic practices, from body wraps and exfoliations
+                    to hydrotherapy. Jaz's dedication to wellness and relaxation helps clients experience
+                    a rejuvenating escape. She ensures a serene spa journey, combining her knowledge of 
+                    therapies to create an immersive and revitalizing experience.</p> 
+            </div>          
+        </div>
+</section>
+
+<!--Kontakta oss-->
+<section class="contact-us"> <!-- Andra sektionen av sidan som är kontakta oss -->
+    <div class="row">
+        <div class="contact-col"> <!-- kontaktakolumn -->
+            <h2>Opening hours</h2> <!-- Heading för öppetider -->
+            <h4>Monday-Friday</h4> <!-- Sub heading -->
+                <p>10:00 - 20:00 </p> <!-- öppetider -->
+            <h4>Saturday-Sunday</h4> <!-- Sub heading -->
+                <p>11:00 - 18:00</p> <!-- öppetider -->
+            
+            <h2>Contact Us:</h2> <!-- Heading -->
+            
+            <p>info@greenrituals.com </p> 
+            <p>0721221212</p> <br> <!-- mail och telefonnummer -->
+
+            <button class="btn">Available Jobs</button> <!-- Lediga jobb knapp, ej länkat -->
+
+        </div>
+    </div>
+   
+
+</section> <!-- Slut på andra sektionen av sidan som är kontakta oss -->
+
+<!--javascript for toggle menu-->
+<script>
+    var Menu= document.getElementById("Menu");
+    function showMenu(){
+        Menu.style.right="0";
+    }
+    function hideMenu(){
+        Menu.style.right="-200px";
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,473 @@
+/*Startsidan (index)*/
+/*All margin och padding återställs till 0*/
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/*Header sektion stil har an anpassad längd och bredd med en bakgrund bild som har en gradient, samt att bakgrund bilden är på hela sektionen*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/Green\ spa\ cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*Sidan har en grön transparens bakgrund färg*/
+body{
+    background-color: rgba(53, 94, 59, 0.7);
+}
+/*Stilar av navigationsfältet, används flex för att positionera objekten, padding för att justera avstånd mellan objekten och centrera i mitten*/
+nav{
+    display: flex; 
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+/*stil av loggan, en spicifik bredd och text storlek på loggan, nowrap för att visning av texten inte ska brytas*/
+.logo{
+    width: 150px;
+    font-size: 28px;
+    white-space: nowrap;
+}
+/*removing the line under the logo text*/
+a {
+    text-decoration: none;
+}
+/*loggan färg är grön*/
+h2{
+    color: #6db878;
+}
+/*stil av menydelen, flex för att justera innehållet till höger*/
+.menu{
+    flex: 1;
+    text-align: right;
+}
+/*stil av menylänkar, meny är på samma rad med mellanrum på varj meny */
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+/*stil av menylänkar texten, en specifik färg, storlek och fetstil*/
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*vid hover ändras färgen av texten i meny*/
+.menu a:hover{
+    color: #cc9901;
+}
+/*stil av textrutan, texten är i mitten av sidan med en absolute positionerin och transform, texten är justerat med mellanrum*/
+.text-box{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*en specifik text storlek och färg för h1 i textrutan*/
+.text-box h1{
+    font-size: 57px;
+    color: #ffffff;
+}
+/*en specifik text storlek och färg för h3 i textrutan samt texten är i mitten av rutan*/
+.text-box h3{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+/*stil för knappen, knapp med en bakgrundfärg och textfärg och storlek, en specifik typsnitt och fetstil. Knappen har en border radius och transition*/
+.bt {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #355e3b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+/*vid hover ändras färgen */
+.bt:hover{
+    background-color: #cc9901;
+}
+/* X ikonen ska inte synas på desktop med display none*/
+.menu .fa {
+    display: none; /* Hide menu icon by default */
+}
+/*meny ikonen ska inte synas på desktop med visibility collapse*/
+.mobile-menu-icon{
+    visibility: collapse;
+}
+/*mobil anpassad sida med all text och bild för första sektionen */
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 27px;
+    }
+    .text-box h3{
+        font-size: 20px;
+        padding-top: 5px;
+    }
+    .logo{
+        font-size: 25px;
+        margin-top: 15px;
+    }
+    .menu ul li{
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background: #89a08ca6;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .menu .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .menu ul{
+        padding: 20px;
+    }
+    .mobile-menu-icon{
+        visibility: visible;
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+/*Behandling delen i startsidan*/
+/*justerat bredd och marginal med texten i mitten, text färg vit och är högst upp*/
+.treatments{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+/*en specifik storlek och stil på h1 */
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+/*hela behandling raden har mellanrum mellan bilderna och text med marginal och flex dispay som lägger den i mitten */
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;    
+}
+/*bilderna har en specifik storlek med radius på kanten och avstånd under */
+.treatments-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/*texten är länkat och har en mörkgrön färg*/
+.treatments-col a{
+    text-decoration: none;
+    color: #182c1b;
+}
+/*texten är i mitten och har en fetstil på 600 med mellanrum på toppen och 25px i storlek*/
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 16px;
+    font-size: 25px;
+}
+/*bilden har en bredd på 100% och radius på kanten*/
+.treatments-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+/*mobil anpassad för andra sektionen */
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .treatments h1{
+        font-size: 22px;
+    }
+    .treatments-col h3{
+        font-size: 22px;
+    }
+}
+
+/*om oss delen i startsidan*/
+/*bredd anpassad till 80% som skapas en box med padding och margnal, texten justerat till center, bakgrundfärg med en del genomskinlighet*/
+.about-us{
+    width: 80%;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin: 5% auto;
+    background: rgba(255, 247, 224, 0.3);
+}
+/*heading h4 har en mellanrum på toppen och botten med en specifik storlek och stil*/
+.about-us h4{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 25px;
+}
+/*Logga texten har en färg med fetstil och specifik storlek*/
+.about-us span{
+    color: #355e3b;
+    font-weight: bold;
+    font-size: 20px;
+}
+/*texten i boxen har mellanrum under och på höjden*/
+p{
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+/*mobil anpassad för about us delen */
+@media(max-width: 700px){
+    .about-us{
+        font-size: 14px;
+        padding: 20px;
+        width: 75%;
+    }
+}
+
+/*Behandling sidan*/
+/*header 2 har en specifik storlek och färg med marginal och padding omkring*/
+.treatments-col h2{
+    font-size: 25px;
+    color: #182c1b;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/*stil för knappen, knapp med en bakgrundfärg, textfärg och storlek, en specifik typsnitt, fetstil på texten och storlek på knappen. Knappen har en border radius och transition*/
+.button-box .bt{
+    width: 100px;
+    height: 25px;
+    background: #355e3b;
+    border: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+    transition: .3s ease;
+    font-size: 19px;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+/*vid hover ändras färgen*/
+.bt:hover{
+    background-color: #cc9901;
+}
+
+/*Boka tid sidan*/
+/*titel på sidan är i mitten med mellanrum runt omkring och har storlek 39px*/
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    font-size: 39px;
+}
+/*rutan har en specifik storlek och färg med radius på kanten och mellanrum, texten är i mitten och har en specifik storlek. Knaten har en punkt stil runt rutan med en grönfärg  */
+.form-text{
+    width: 40%;
+    font-size: 18px;
+    padding: 30px 0;
+    border-radius: 10px;
+    margin: 9% auto;
+    background: rgba(255, 247, 224, 0.3);
+    color: #000000;
+    padding-left: 30px;
+    outline: 2px dashed #355e3b;
+    outline-offset: -17px;
+
+}
+/*texten har en specifik färg och storlek och är placerat i mitten med en padding */
+.form-text h2{
+    color: #182c1b;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+/*rutan har en avstånd på 8px på kanten*/
+.form{
+    padding: 8px;
+}
+/*input och texten har en specifik storlek med padding omkring */
+.form-text input[type="text"], .form-text input[type="tel"], .form-text input[type="email"], .form-text input[type="date"] {
+    width: 70%;
+    padding: 12px;
+    font-size: 10px 
+}
+/*stil för knappen, knapp med en bakgrundfärg, textfärg och storlek, en specifik typsnitt, fetstil på texten och storlek på knappen. Knappen har en border radius och transition*/
+.button {
+    width: 190px;
+    height: 40px;
+    background: #355e3b;
+    border: 10px;
+    margin-bottom: 10px;
+    margin-left: 140px;
+    border-radius: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fff;
+}
+/*vid hover ändras färgen*/
+.button:hover {
+    background-color: #cc9901;
+}
+/*mobil anpassad för bokning sida */
+@media(max-width: 700px){
+    .form-text h2{
+        font-size: 22px;
+    }
+    .form-text{
+        width: 80%;
+    }
+    .form{
+        width: 80%;
+    }
+    .button{
+        width: 120px;
+        height: 40px;
+        margin-left: 75px;
+    }
+}
+
+/*Om oss sidan*/
+/*sub header sektion stil har an anpassad längd och bredd med en bakgrund bild som har en gradient, samt att bakgrund bilden är på hela sektionen, text färg är vit och placerat i mitten*/
+.sub-header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/Green\ spa\ cover.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+/*marginal på toppen och en 39px storlek på header 1 */
+.sub-header h1{
+    margin-top: 100px;
+    font-size: 39px;
+}
+/*loggan text är grön färg med bold stil */
+.sub-header span{
+    color: #6db878;
+    font-weight: bold;
+    font-size: 20px;
+}
+/*marginal på toppen och en 18px storlek på texten */
+.sub-header p{
+    font-size: 18px;
+    padding: 60px;
+}
+/*en specifik storlek på hela kolumn med mellanrum på toppen och vit färg på texen*/
+.workers{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+/*header 2 har en specifik storlek och färg med med avstånd */
+.workers-col h2{
+    font-size: 20px;
+    color: #182c1b;
+    padding: 5px;
+    margin-top: 5px;
+}
+/*texten har en specifik storlek och avstånd runt omrking */
+.workers p{
+    font-size: 16px;
+    padding: 8px;
+}
+/*bilderna har en specifik width storlek med radius på kanten */
+.workers-col img{
+    width: 90%;
+    border-radius: 10px;
+}
+/*rutan har en specifik storlek och färg med radius på kanten och mellanrum, texten är i mitten. Knaten har en punkt stil runt rutan med en grönfärg  */
+.contact-col{
+    width: 40%;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 10px;
+    margin: 9% auto;
+    background: rgba(255, 247, 224, 0.3);
+    outline: 2px dashed #355e3b;
+    outline-offset: -17px;
+    
+}
+/*header 2 har en marginal på botten och grönfärg*/
+.contact-col h2{
+    color: #355e3b;
+    margin-bottom: 10px;
+}
+
+/*stil för knappen, knapp med en bakgrundfärg, textfärg och storlek, en specifik typsnitt, fetstil och storlek på knappen. Knappen har en border radius och transition*/
+.btn{
+    width: 160px;
+    height: 40px;
+    background: #355e3b;
+    border: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold; 
+    font-family:'Times New Roman', Times, serif;
+
+}
+/*vid hover ändras färgen*/
+.btn:hover {
+    background-color: #cc9901;
+}
+/*mobil anpassad för om oss sida */
+@media(max-width: 700px){
+    .sub-header h1{
+        font-size: 25px;
+        margin-top: 40%;
+    }
+    .sub-header p{
+        font-size: 16px;
+        padding: 20px;
+    }
+    .workers h1{
+        font-size: 22px;
+    }
+    .workers h2{
+        font-size: 20px;
+    }
+    .workers-col{
+        margin: 20px;
+    }
+    .workers-col p{
+        margin: 0;
+        padding: 0;
+    }
+    .contact-col{
+        width: 90%;
+    }
+}
+
+
