@@ -1,1 +1,1 @@
-# green-rituals
+# Green-rituals
